@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/galleryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Gallery"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24dp" />
+
+    <RadioGroup
+        android:id="@+id/sortElements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/galleryTitle"
+        android:layout_toLeftOf="@+id/checkBoxTableView" >
+
+        <RadioButton
+            android:id="@+id/sortByDate"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:text="Sort by date" />
+
+        <RadioButton
+            android:id="@+id/sortByName"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:checked="true"
+            android:text="Sort by name" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBoxTableView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sortElements"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="28dp"
+        android:text="Show Table View" />
+
+    <GridView
+        android:id="@+id/gridViewGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sortElements"
+        android:layout_centerHorizontal="true"
+        android:numColumns="3" >
+    </GridView>
+
+    <ListView
+        android:id="@+id/listViewGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gridViewGallery"
+        android:layout_centerHorizontal="true" >
+
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/mapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkBoxTableView"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/map_icon" />
+
+</RelativeLayout>

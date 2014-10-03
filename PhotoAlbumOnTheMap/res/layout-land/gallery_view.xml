@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/galleryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Gallery"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24dp" />
+
+    <RadioGroup
+        android:id="@+id/sortElements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/galleryTitle" >
+
+        <RadioButton
+            android:id="@+id/sortByDate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Sort by date" />
+
+        <RadioButton
+            android:id="@+id/sortByName"
+            android:layout_width="178dp"
+            android:layout_height="54dp"
+            android:checked="true"
+            android:text="Sort by name" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBoxTableView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mapButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/sortElements"
+        android:layout_below="@+id/sortElements"
+        android:text="Show Table View" />
+
+    <GridView
+        android:id="@+id/gridViewGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/listViewGallery"
+        android:layout_toRightOf="@+id/sortElements"
+        android:numColumns="3" >
+
+    </GridView>
+
+    <ListView
+        android:id="@+id/listViewGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/sortElements"
+        android:layout_marginRight="26dp"
+        android:layout_toRightOf="@+id/sortElements" >
+
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/mapButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/map_icon"
+        android:maxHeight="10dp"
+        android:maxWidth="10dp" />
+
+</RelativeLayout>
